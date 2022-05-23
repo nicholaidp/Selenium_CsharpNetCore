@@ -30,7 +30,6 @@ namespace Selenium_CSharpNetCore
 
 
 
-            Console.WriteLine("Test1");
             Assert.Pass();
         }
     }
