@@ -1769,11 +1769,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicho\\source\\repos\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
       "projectName": "Selenium_CSharpNetCore",
-      "projectPath": "C:\\Users\\nicho\\source\\repos\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
+      "projectPath": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
       "packagesPath": "C:\\Users\\nicho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicho\\source\\repos\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore\\obj\\",
+      "outputPath": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicho\\AppData\\Roaming\\NuGet\\NuGet.Config",
