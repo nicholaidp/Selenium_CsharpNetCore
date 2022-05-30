@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KdxK6B7iRG/KP0HZ6gXAdzLjls5WKP4AQlbLFI+Fq/PLuTJ6H1vp0l2MkHna8csf4XkxRtTPCg9sO0MDoy1oCw==",
+  "dgSpecHash": "A6kjaG00FJLNXKarx4o+ajmd9NQuTOBPrMIMmNd8CD3TRQ0fRLvKqzSSk4pDneppWngvIpFrLOVjWnnVFF3IAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nicho\\.nuget\\packages\\aajgen\\0.0.3\\aajgen.0.0.3.nupkg.sha512",
     "C:\\Users\\nicho\\.nuget\\packages\\anglesharp\\0.16.1\\anglesharp.0.16.1.nupkg.sha512",
     "C:\\Users\\nicho\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\nicho\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
@@ -29,5 +30,16 @@
     "C:\\Users\\nicho\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
     "C:\\Users\\nicho\\.nuget\\packages\\webdrivermanager\\2.12.4\\webdrivermanager.2.12.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AAJGen 0.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AAJGen",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
