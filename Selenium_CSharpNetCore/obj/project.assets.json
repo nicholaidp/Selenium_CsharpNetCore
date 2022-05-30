@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "AAJGen/0.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net40/AAJGen.dll": {}
-        },
-        "runtime": {
-          "lib/net40/AAJGen.dll": {}
-        }
-      },
       "AngleSharp/0.16.1": {
         "type": "package",
         "dependencies": {
@@ -524,19 +515,6 @@
     }
   },
   "libraries": {
-    "AAJGen/0.0.3": {
-      "sha512": "q6yPZmLFnTfxjR+NmqhXu5lUTUGaGkF1n0vIFpFKYMV/kjGblmb84fanhxJWhoSvy9sOLofuuwXOuulxzYhrew==",
-      "type": "package",
-      "path": "aajgen/0.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "aajgen.0.0.3.nupkg.sha512",
-        "aajgen.nuspec",
-        "lib/net40/AAJGen.dll",
-        "lib/net40/AAJGen.xml"
-      ]
-    },
     "AngleSharp/0.16.1": {
       "sha512": "1k7Vbfmr5IUsGaR0QJwTe8XF9zacFUIoWxMgI4X/ipiyKxCWZJZoaG96fNEugL90iubvboRvE1IxuBPibET/Rg==",
       "type": "package",
@@ -1774,7 +1752,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "AAJGen >= 0.0.3",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.3.0",
@@ -1825,10 +1802,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "AAJGen": {
-            "target": "Package",
-            "version": "[0.0.3, )"
-          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.1.0, )"
@@ -1884,17 +1857,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'AAJGen 0.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "AAJGen",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
