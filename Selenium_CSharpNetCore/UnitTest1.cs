@@ -22,7 +22,7 @@ namespace Selenium_CSharpNetCore
 
         public void Test1()
         {
-            
+            #region vars
             var randomFname = RandomGenerator.generateFname();
             var randomLname = RandomGenerator.generateLname();
             var randomMname = RandomGenerator.generateMname();
@@ -48,16 +48,35 @@ namespace Selenium_CSharpNetCore
             var randomPhonenumber2 = RandomGenerator.generatePhonenumber();
             var randomOccupations2 = RandomGenerator.generateOccupation();
             var randomIncome2 = RandomGenerator.generateIncome();
+            var randomRemarks = RandomGenerator.generateRemarks();
+            var randomMembershipType = RandomGenerator.generateMembershipType();
+            var randomRoomTypeRegular = RandomGenerator.generateRegularRoomType();
+            var randomRoomTypePremium = RandomGenerator.generatePremiumRoomType();
+            var randomHomeResort = RandomGenerator.generateHomeResort();
+            var randomTerms = RandomGenerator.generateTerms();
+            var randomDiscount = RandomGenerator.generateDiscount();
+            var randomAdditionalDiscount = RandomGenerator.generateAdditionalDiscount();
+            var randomPaymentMode = RandomGenerator.generatePaymentMode();
+            var randomBank = RandomGenerator.generateBank();
+            var randomAccountNum = RandomGenerator.generateAccountNum();
+            var randomAmountPaid = RandomGenerator.generateAmountPaid();
+            var randomDeposit = RandomGenerator.generateDeposit();
+            var randomMaxOccupancy = RandomGenerator.generateMaximumOccupancy();
+            var randomMonths = RandomGenerator.generateMonth();
+            var randomOnboard = RandomGenerator.randomOnboardBtn();
 
-           
 
-            Driver.Navigate().GoToUrl("http://112.199.116.13:3001/login");
-           
 
+
+
+            #endregion
+
+
+
+            Driver.Navigate().GoToUrl("http://112.199.116.13:3001/login");         
             Driver.Manage().Window.Maximize();
            
-
-            Driver.FindElement(By.Id("input-16")).SendKeys("kslimlengco@revlv.com");
+            Driver.FindElement(By.Id("input-16")).SendKeys("admin@revlv.com");
             Driver.FindElement(By.Id("input-20")).SendKeys("password");
             Driver.FindElement(By.ClassName("v-btn__content")).Click();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
@@ -195,6 +214,8 @@ namespace Selenium_CSharpNetCore
             System.Threading.Thread.Sleep(1000);
             #endregion
 
+            #region Survey
+           
             Driver.FindElement(By.Id("button_next")).Click();
 
             System.Threading.Thread.Sleep(2000);
@@ -202,38 +223,108 @@ namespace Selenium_CSharpNetCore
             Driver.FindElement(By.ClassName("input_question_one_yes")).Click();
             Driver.FindElement(By.ClassName("input_question_two_no")).Click();
             Driver.FindElement(By.ClassName("input_question_three_yes")).Click();
-
-            Driver.FindElement(By.XPath("//*[@id='input_proceed_onboarding']/div/main/div/div/div[2]/div/div/div[2]/div[2]/form/div[5]/div/div/div/div[1]/div/div")).Click();
-
             System.Threading.Thread.Sleep(2000);
             Driver.FindElement(By.Id("button_submit")).Click();
+            #endregion
 
-            System.Threading.Thread.Sleep(500);
+            System.Threading.Thread.Sleep(5000);
 
-
-            IWebElement btnAction0 = Driver.FindElement(By.Id("btn-options-0"));
+            #region onboarding
+            IWebElement btnAction0 = Driver.FindElement(By.Id("btn-options-"+ randomOnboard));
             btnAction0.Click();
 
             System.Threading.Thread.Sleep(3000);
 
-            IWebElement btnOnboard0 = Driver.FindElement(By.Id("btn-onboard-0"));
+            IWebElement btnOnboard0 = Driver.FindElement(By.Id("btn-onboard-" + randomOnboard ));
             btnOnboard0.Click();
+            System.Threading.Thread.Sleep(5000);
 
-            
+            Driver.FindElement(By.Id("btn-add-email")).Click();
+            Driver.FindElement(By.Id("input-email")).SendKeys(randomLname2 + randomMname + "@yahoo.com");
+            //Driver.FindElement(By.Id("input-remarks")).SendKeys(randomRemarks);
+            Driver.FindElement(By.Id("btn-email-add")).Click();
+
+            System.Threading.Thread.Sleep(2000);
+            Driver.FindElement(By.Id("btn-add-social-media")).Click();
+            Driver.FindElement(By.Id("input-name")).SendKeys(randomLname2 + " " + randomMname);
+            Driver.FindElement(By.Id("input-account_name")).SendKeys(randomLname2 +" "+ randomMname);
+            //Driver.FindElement(By.Id("input-remarks")).SendKeys(randomRemarks);
+            Driver.FindElement(By.Id("btn-social-add")).Click();
+
+            System.Threading.Thread.Sleep(2000);
+            IWebElement membershipType = Driver.FindElement(By.Id("input-membership_type"));
+            membershipType.SendKeys(randomMembershipType);
+            membershipType.SendKeys(Keys.Down);
+            membershipType.SendKeys(Keys.Enter);
 
 
+            IWebElement homeResort = Driver.FindElement(By.Id("input-home_resort"));
+            homeResort.SendKeys(randomHomeResort);
+            homeResort.SendKeys(Keys.Down);
+            homeResort.SendKeys(Keys.Enter);
 
 
+            if (randomMembershipType == "Regular")
+            {
+                IWebElement regularMembership = Driver.FindElement(By.Id("input-room_type"));
+                regularMembership.SendKeys(randomRoomTypeRegular);
+                regularMembership.SendKeys(Keys.Down);
+                regularMembership.SendKeys(Keys.Enter);
+            }
+
+            else
+            {
+                IWebElement premiumMembership = Driver.FindElement(By.Id("input-room_type"));
+                premiumMembership.SendKeys(randomRoomTypePremium);
+                premiumMembership.SendKeys(Keys.Down);
+                premiumMembership.SendKeys(Keys.Enter);
+            }
+            System.Threading.Thread.Sleep(2000);
+            IWebElement paymentTerms = Driver.FindElement(By.Id("input-payment_terms"));
+            paymentTerms.Click();
+            paymentTerms.SendKeys(randomTerms);
+            System.Threading.Thread.Sleep(5000);
+            paymentTerms.SendKeys(Keys.Down);
+            paymentTerms.SendKeys(Keys.Enter);
+
+            if(randomTerms == "Custom (# of mos)")
+            {
+                Driver.FindElement(By.Id("input-months")).SendKeys(randomMonths);
+            }
+
+            IWebElement discount = Driver.FindElement(By.Id("input-discount"));
+            discount.SendKeys(randomDiscount);
+            discount.SendKeys(Keys.Down);
+            discount.SendKeys(Keys.Enter);
+
+            //IWebElement additionalDiscount = Driver.FindElement(By.Id("input-additional_discount"));
+            //additionalDiscount.SendKeys(randomAdditionalDiscount);
+            //Driver.FindElement(By.ClassName("v-btn--is-elevated")).Click();
 
 
+            IWebElement paymentMode = Driver.FindElement(By.Id("input-payment_mode"));
+            paymentMode.SendKeys(randomPaymentMode);
+            paymentMode.SendKeys(Keys.Down);
+            paymentMode.SendKeys(Keys.Enter);
 
+            if(randomPaymentMode== "Bank Transfer" || randomPaymentMode == "Credit Card" || randomPaymentMode == "Check/Cheque")
+            {
+                IWebElement bank = Driver.FindElement(By.Id("input-bank"));
+                bank.SendKeys(randomBank);
+                bank.SendKeys(Keys.Down);
+                bank.SendKeys(Keys.Enter);
 
+                Driver.FindElement(By.Id("input-account_number")).SendKeys(randomAccountNum);
+            } 
 
+            Driver.FindElement(By.Id("input-amount_paid")).SendKeys(randomAmountPaid);
+            Driver.FindElement(By.Id("input-deposit")).SendKeys(randomDeposit);
+            Driver.FindElement(By.Id("input-owner_relations_manager")).SendKeys(randomMname2 + " " + randomLname);
+            Driver.FindElement(By.Id("input-max_occupancy_allowed")).SendKeys(randomMaxOccupancy);
+            Driver.FindElement(By.Id("input-remarks")).SendKeys(randomRemarks);
+            Driver.FindElement(By.Id("btn-onboard")).Click();
 
-            
-
-
-
+            #endregion
 
         }
     }
