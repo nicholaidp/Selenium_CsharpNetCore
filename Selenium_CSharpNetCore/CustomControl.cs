@@ -11,7 +11,7 @@ namespace Selenium_CSharpNetCore
     {
        public static void ComboBox(string controlName, string value)
         {
-
+ 
             IWebElement comboControl = Driver.FindElement(By.XPath($"//input[@id='{controlName}-awed']"));
 
 

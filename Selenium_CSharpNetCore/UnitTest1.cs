@@ -230,7 +230,7 @@ namespace Selenium_CSharpNetCore
             System.Threading.Thread.Sleep(5000);
 
             #region onboarding
-            IWebElement btnAction0 = Driver.FindElement(By.Id("btn-options-"+ randomOnboard));
+             IWebElement btnAction0 = Driver.FindElement(By.Id("btn-options-"+ randomOnboard));
             btnAction0.Click();
 
             System.Threading.Thread.Sleep(3000);
