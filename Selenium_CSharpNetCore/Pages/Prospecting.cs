@@ -38,9 +38,9 @@ namespace Selenium_CSharpNetCore.Pages
             //Driver.FindElement(By.Id("input-20")).SendKeys("password");
             Driver.FindElement(By.ClassName("v-btn__content")).Click();
 
-            for (int i = 0; i < 39; i++)
+            for (int i = 0; i < 5; i++)
             {
-                randomGender = RandomGenerator.generateGender();
+                
                 randomFname = RandomGenerator.generateFname();
                 randomLname = RandomGenerator.generateLname();
                 randomMname = RandomGenerator.generateMname();
@@ -48,13 +48,13 @@ namespace Selenium_CSharpNetCore.Pages
                 randomPhonenumber = RandomGenerator.generatePhonenumber();
                 randomDOB = RandomGenerator.generateDOB();
                 randomCivilStatus = RandomGenerator.generateCivilStatus();
-
+                randomGender = RandomGenerator.generateGender();
                 System.Threading.Thread.Sleep(1000);
                 
                 Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
-                Driver.FindElement(By.LinkText("NEW")).Click();
-                Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-                Driver.FindElement(By.ClassName("v-input--selection-controls__input")).Click();
+                Driver.FindElement(By.ClassName("v-btn--is-elevated")).Click();
+                //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+                //Driver.FindElement(By.ClassName("v-input--selection-controls__input")).Click();
                 Driver.FindElement(By.Id("input_salutation")).SendKeys(randomSalutations);
                 Driver.FindElement(By.Id("input_first_name")).SendKeys(randomFname);
                 Driver.FindElement(By.Id("input_middle_name")).SendKeys(randomMname);
@@ -71,9 +71,26 @@ namespace Selenium_CSharpNetCore.Pages
                 #endregion
                 #region gender
                 IWebElement gender = Driver.FindElement(By.Id("input_gender"));
-                gender.SendKeys(randomGender);
-                gender.SendKeys(Keys.Down);
-                gender.SendKeys(Keys.Enter);
+                if (randomSalutations == "Mr")
+                {
+                    gender.SendKeys("Male");
+                    gender.SendKeys(Keys.Down);
+                    gender.SendKeys(Keys.Enter);
+                }
+                else if(randomSalutations == "Ms" || randomSalutations == "Mrs")
+                {
+                    gender.SendKeys("Female");
+                    gender.SendKeys(Keys.Down);
+                    gender.SendKeys(Keys.Enter);
+                }
+                else
+                {
+                    gender.SendKeys(randomGender);
+                    gender.SendKeys(Keys.Down);
+                    gender.SendKeys(Keys.Enter);
+                }
+                
+              
                 #endregion
                 Driver.FindElement(By.Id("input_contact_number")).SendKeys("09" + randomPhonenumber);
                 Driver.FindElement(By.Id("input_email")).SendKeys(randomFname + randomLname + "@gmail.com");

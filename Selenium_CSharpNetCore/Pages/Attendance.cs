@@ -21,7 +21,7 @@ namespace Selenium_CSharpNetCore.Pages
 
             Driver.Navigate().GoToUrl("http://112.199.116.13:3001/login");
             Driver.Manage().Window.Maximize();
-            System.Threading.Thread.Sleep(2000);
+          
             IWebElement userName = Driver.FindElement(By.Id("input-16"));
             userName.Click();
             userName.SendKeys(Keys.Control + "a" + Keys.Delete);
@@ -29,10 +29,25 @@ namespace Selenium_CSharpNetCore.Pages
             //Driver.FindElement(By.Id("input-16")).SendKeys("admin@revlv.com");
             //Driver.FindElement(By.Id("input-20")).SendKeys("password");
             Driver.FindElement(By.ClassName("v-btn__content")).Click();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
-            Driver.FindElement(By.LinkText("")).Click();
-            //Driver.FindElement(By.XPath("//button[@class='v-btn__content']/following-sibling::div[text()='All']")).Click();
+            //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            System.Threading.Thread.Sleep(3000);
 
+            Driver.FindElement(By.Id("btn-attendance-sort")).Click();
+            Driver.FindElement(By.Id("btn-attendance-sort-pending")).Click();
+            for (int i = 0; i < 5; i++)
+            {
+      
+                System.Threading.Thread.Sleep(500);
+                Driver.FindElement(By.Id("btn-options-0")).Click();
+                System.Threading.Thread.Sleep(2000);
+                Driver.FindElement(By.Id("btn-onboard-0")).Click();
+                System.Threading.Thread.Sleep(500);
+                IWebElement dateAttended = Driver.FindElement(By.Id("input-attended_at"));
+                dateAttended.Click();
+                dateAttended.SendKeys("06072022");
+                Driver.FindElement(By.Id("btn-save")).Click();
+                
+            }
         }
     }
 }
