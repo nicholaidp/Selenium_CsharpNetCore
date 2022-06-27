@@ -1576,6 +1576,116 @@ namespace Selenium_CSharpNetCore
         private static string[] banks = { "BPI", "BDO", "Metrobank", "Union Bank", "Bank of Commerce", "Landbank" };
         private static string[] onboard = { "1", "2", "3", "4", "5", "6","7","8","9","0" };
         private static string[] gender = { "Male", "Female" };
+        private static string[] booker = { "Nick Confirmer", "Jessa Receptionist", "John Doe", "Mau Receptionist" };
+        private static string[] exibitor = { "Eunice Alonzo", "Ryan Alonzo" };
+        private static string[] source = { "OPC", "NMB" ,"OLP" };
+        private static string[] work = { "Managerial - 3 Years Up", "Supervisory - 7 Years Up", "OFW - 3 Years Up"};
+        private static string[] venueManager = { "Jay Fernandez", "Ricardo Pascua","Dean Damasig" };
+        private static string[] presentation = { "input_presentation_yes", "input_presentation_no" };
+        private static string[] attendedPresentation = { "input_attended_presentation_yes", "input_attended_presentation_no" };
+        private static string[] device = { "Laptop", "Desktop", "IPAD"};
+        private static string[] stubNum = {
+            "437-67-7568",
+"730-38-9440",
+"388-60-8116",
+"210-53-8027",
+"142-11-7154",
+"235-98-4423",
+"779-73-8674",
+"858-45-7875",
+"455-75-4771",
+"518-45-7680",
+"653-82-6999",
+"849-03-5835",
+"266-13-1704",
+"504-75-6833",
+"614-24-4684",
+"872-57-4971",
+"437-04-9132",
+"698-14-6205",
+"779-27-8640",
+"765-76-4397",
+"819-95-0727",
+"508-28-6674",
+"726-84-1626",
+"546-15-8344",
+"803-61-1609",
+"273-71-4857",
+"736-62-7977",
+"618-04-0416",
+"777-01-5547",
+"376-50-5548",
+"732-97-9808",
+"335-81-4290",
+"835-85-6743",
+"556-05-5010",
+"179-83-0832",
+"685-31-4929",
+"255-22-9137",
+"137-08-1065",
+"656-99-8952",
+"392-69-4197",
+"630-88-7201",
+"828-87-6548",
+"407-94-4527",
+"663-28-8445",
+"273-54-3415",
+"656-57-6273",
+"352-13-2824",
+"894-86-6289",
+"671-86-1651",
+"649-34-5893",
+"164-32-2078",
+"318-53-4136",
+"294-38-9182",
+"136-58-3751",
+"359-45-1855",
+"106-31-1258",
+"187-54-1871",
+"161-79-5609",
+"731-64-8222",
+"897-07-4025",
+"459-99-0576",
+"858-20-4727",
+"739-11-5446",
+"126-44-5343",
+"167-34-9080",
+"711-09-4272",
+"643-14-3634",
+"636-37-7889",
+"117-59-9497",
+"168-25-8513",
+"186-31-8922",
+"263-34-6017",
+"708-62-9375",
+"145-46-1299",
+"533-24-3707",
+"716-48-2823",
+"772-79-6681",
+"682-90-0280",
+"682-41-3586",
+"469-69-4015",
+"291-53-2911",
+"230-09-0864",
+"824-67-5244",
+"182-14-9872",
+"304-24-6393",
+"414-50-8481",
+"582-87-8047",
+"348-33-8633",
+"190-59-8607",
+"174-39-8864",
+"229-70-6348",
+"559-79-6403",
+"100-41-6439",
+"668-81-8352",
+"318-29-7053",
+"188-96-6118",
+"593-14-9720",
+"442-62-2350",
+"500-74-1214",
+"683-09-7712"};
+        private static string[] confStatus = { "Confirmed", "Cancelled", "Re-Scheduled", "Unconfirmed","Unreachable" };
 
         public static string generateFname()
         {
@@ -1674,7 +1784,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomStreet}";
         }
-
         public static string generateBuildingNum()
         {
             var rand = new Random();
@@ -1701,7 +1810,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomDay}{randomMonth}{randomYear}";
         }
-
         public static string generateCivilStatus()
         {
             var rand = new Random();
@@ -1710,7 +1818,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomCivilStatus}";
         }
-
         public static string generateRemarks()
         {
             var rand = new Random();
@@ -1759,7 +1866,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomHomeResort}";
         }
-
         public static string generateDiscount()
         {
             var rand = new Random();
@@ -1768,7 +1874,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomDiscount}";
         }
-
         public static string generateAdditionalDiscount()
         {
             var rand = new Random();
@@ -1785,7 +1890,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomPaymentMode}";
         }
-
         public static string generateBank()
         {
             var rand = new Random();
@@ -1794,8 +1898,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomBank}";
         }
-
-
         public static string generateAccountNum()
         {
             var rand = new Random();
@@ -1814,7 +1916,6 @@ namespace Selenium_CSharpNetCore
             return $"{randomAmountPaid}";
 
         }
-
         public static string generateDeposit()
         {
             var rand = new Random();
@@ -1842,7 +1943,6 @@ namespace Selenium_CSharpNetCore
             return $"{randomMonth}";
 
         }
-
         public static string randomOnboardBtn()
         {
             var rand = new Random();
@@ -1859,8 +1959,97 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomGender}";
         }
+        public static string generateBooker()
+        {
+            var rand = new Random();
 
+            string randomBooker = booker[rand.Next(booker.Length)];
 
+            return $"{randomBooker}";
+        }
+        public static string generateExhibitor()
+        {
+            var rand = new Random();
+
+            string randomExhibitor = exibitor[rand.Next(exibitor.Length)];
+
+            return $"{randomExhibitor}";
+        }
+        public static string generateSource()
+        {
+            var rand = new Random();
+
+            string randomSource = source[rand.Next(source.Length)];
+
+            return $"{randomSource}";
+        }
+
+        public static string generateProfessionYears()
+        {
+            var rand = new Random();
+
+            int randomProfessionYears = rand.Next(1, 30);
+
+            return $"{randomProfessionYears}";
+
+        }
+        public static string generateWork()
+        {
+            var rand = new Random();
+
+            string randomWork = work[rand.Next(work.Length)];
+
+            return $"{randomWork}";
+        }
+        public static string generateStubNum()
+        {
+            var rand = new Random();
+
+            string randomStub = stubNum[rand.Next(stubNum.Length)];
+
+            return $"{randomStub}";
+        }
+        public static string generateVenueManager()
+        {
+            var rand = new Random();
+
+            string randomVM = venueManager[rand.Next(venueManager.Length)];
+
+            return $"{randomVM}";
+        }
+        public static string generatePresentationAnswer()
+        {
+            var rand = new Random();
+
+            string randomAnswer = presentation[rand.Next(presentation.Length)];
+
+            return $"{randomAnswer}";
+        }
+        public static string generateDevice()
+        {
+            var rand = new Random();
+
+            string randomDevice = device[rand.Next(device.Length)];
+
+            return $"{randomDevice}";
+        }
+        public static string generatePresentationAttendance()
+        {
+            var rand = new Random();
+
+            string randomAttendance = attendedPresentation[rand.Next(attendedPresentation.Length)];
+
+            return $"{randomAttendance}";
+        }
+        public static string generateConfStatus()
+        {
+            var rand = new Random();
+
+            string randomStatus = confStatus[rand.Next(confStatus.Length)];
+
+            return $"{randomStatus}";
+        }
     }
 }
+
 
