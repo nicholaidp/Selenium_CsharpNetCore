@@ -1580,7 +1580,7 @@ namespace Selenium_CSharpNetCore
         private static string[] exibitor = { "Eunice Alonzo", "Ryan Alonzo" };
         private static string[] source = { "OPC", "NMB" ,"OLP" };
         private static string[] work = { "Managerial - 3 Years Up", "Supervisory - 7 Years Up", "OFW - 3 Years Up"};
-        private static string[] venueManager = { "Jay Fernandez", "Ricardo Pascua","Dean Damasig" };
+        private static string[] venueManager = { "Jay Fernandez" };
         private static string[] presentation = { "input_presentation_yes", "input_presentation_no" };
         private static string[] attendedPresentation = { "input_attended_presentation_yes", "input_attended_presentation_no" };
         private static string[] device = { "Laptop", "Desktop", "IPAD"};
@@ -1685,7 +1685,108 @@ namespace Selenium_CSharpNetCore
 "442-62-2350",
 "500-74-1214",
 "683-09-7712"};
-        private static string[] confStatus = { "Confirmed", "Cancelled", "Re-Scheduled", "Unconfirmed","Unreachable" };
+        private static string[] confStatus = { "Confirmed", "Cancelled", "Re-Scheduled","Unreachable" };
+        private static string[] sourceT2 = { "ROI 4", "OLP 4", "NMB 4" };
+        private static string[] referredBy = {"Eden Casella",
+                                            "Kelsi Jobson",
+                                            "Katlin Thrustle",
+                                            "Dasi Krates",
+                                            "Arte Langtry",
+                                            "Townie Hulburd",
+                                            "Hewet Mailes",
+                                            "Angie Slator",
+                                            "Ailbert Antognelli",
+                                            "Wood Leedes",
+                                            "Les Flindall",
+                                            "Irvine Currer",
+                                            "Jesse Macilhench",
+                                            "Abeu Glasbey",
+                                            "Westley Caulcott",
+                                            "Magdalen Kubek",
+                                            "Colleen Guidelli",
+                                            "Kissiah Freyn",
+                                            "Fiann Crus",
+                                            "Wendy Tanguy",
+                                            "Rosita Rois",
+                                            "Harp Gammill",
+                                            "Maisey Carpe",
+                                            "Flemming Mosby",
+                                            "Kristen Luno",
+                                            "Marlowe Blodgett",
+                                            "Adorne Gatfield",
+                                            "Wilma Rowlinson",
+                                            "Maud Coupe",
+                                            "Jodi Samworth",
+                                            "Philippe Kasperski",
+                                            "Nerti Labden",
+                                            "Millicent Mc Menamin",
+                                            "Guinna Pelfer",
+                                            "Ingaberg Rheaume",
+                                            "Roseanne Height",
+                                            "Jethro Bexley",
+                                            "Petronille Drewes",
+                                            "Alia Daniele",
+                                            "Amabelle Heimes",
+                                            "Elly Joss",
+                                            "Anselm de'-Ancy Willis",
+                                            "Fran Fenelon",
+                                            "Blair Lambrick",
+                                            "Stoddard Stairmand",
+                                            "Betti Whybray",
+                                            "Agatha Suermeiers",
+                                            "Ham Aylmer",
+                                            "Galen Feldstein",
+                                            "Vincenty Boor",
+                                            "Hayward Jacobson",
+                                            "Dulcine MacNess",
+                                            "Emiline Loud",
+                                            "Phoebe Perkins",
+                                            "Ludovika Broke",
+                                            "Yolane Katte",
+                                            "Perrine Crace",
+                                            "Yancey Doughill",
+                                            "Karrie Dashwood",
+                                            "Sheilah Creser",
+                                            "Jacquette Goodband",
+                                            "Diane Troyes",
+                                            "Valaree Goolding",
+                                            "Cathyleen Leitch",
+                                            "Betta Dabels",
+                                            "Jorie Rojel",
+                                            "Felic McCafferky",
+                                            "Bradney Devigne",
+                                            "Kynthia Jouandet",
+                                            "Glendon Stansbie",
+                                            "Keefer Leffek",
+                                            "Philis Geke",
+                                            "Paola Caldroni",
+                                            "Lonnie Got",
+                                            "Roma Wyldbore",
+                                            "Veronique Downgate",
+                                            "Brnaba Jilliss",
+                                            "Rici Mountain",
+                                            "Allin Greber",
+                                            "Nowell Tankus",
+                                            "Ginger Pardon",
+                                            "Danice Guidini",
+                                            "Brandais O'Hannigan",
+                                            "Dollie Jagger",
+                                            "Eberto D'Andrea",
+                                            "Selig Jeffs",
+                                            "Eda Cuttings",
+                                            "Celene Petrishchev",
+                                            "Obediah Shatford",
+                                            "Jonathan Cruess",
+                                            "Jeramie Simmings",
+                                            "Ruthy Redwin",
+                                            "Jada Yanshinov",
+                                            "Leila Housego",
+                                            "Lita Ferrar",
+                                            "Timmy Wreight",
+                                            "Rodney Hasard",
+                                            "Willow Kroger",
+                                            "Kari Demcak",
+                                            "Vaughn Troman"};
 
         public static string generateFname()
         {
@@ -1808,7 +1909,7 @@ namespace Selenium_CSharpNetCore
             int randomYear = rand.Next(1950, 2001);
             int randomDay = rand.Next(4, 28);
 
-            return $"{randomDay}{randomMonth}{randomYear}";
+            return $"{randomDay}/{randomMonth}/{randomYear}";
         }
         public static string generateCivilStatus()
         {
@@ -1983,7 +2084,6 @@ namespace Selenium_CSharpNetCore
 
             return $"{randomSource}";
         }
-
         public static string generateProfessionYears()
         {
             var rand = new Random();
@@ -2048,6 +2148,31 @@ namespace Selenium_CSharpNetCore
             string randomStatus = confStatus[rand.Next(confStatus.Length)];
 
             return $"{randomStatus}";
+        }                                               
+        public static string generateT2()
+        {
+            var rand = new Random();
+
+            string randomT2 = sourceT2[rand.Next(sourceT2.Length)];
+
+            return $"{randomT2}";
+        }
+        public static string generateReferredBy()
+        {
+            var rand = new Random();
+
+            string random = referredBy[rand.Next(referredBy.Length)];
+
+            return $"{random}";
+        }
+
+        public static string generateAge()
+        {
+            var rand = new Random();
+
+            int randomAge   = rand.Next(25, 80);
+
+            return $"{randomAge}";
         }
     }
 }

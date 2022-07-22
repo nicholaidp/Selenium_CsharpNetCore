@@ -18,8 +18,8 @@ namespace Selenium_CSharpNetCore.Pages
         [Test]
         public void Test1()
         {
-            int loopCounter = 2;
-            var status = "Cancelled";
+            int loopCounter = 5;
+            var status = "book";
             var randomPresentationAnswer = "";
             var randomPresentationAttendance = "";
             var randomDevice = "";
@@ -64,6 +64,7 @@ namespace Selenium_CSharpNetCore.Pages
                 comboStatus.SendKeys(status);
                 comboStatus.SendKeys(Keys.Down);
                 comboStatus.SendKeys(Keys.Enter);
+                Driver.FindElement(By.Id("input_book_datetime")).SendKeys("07042022" + Keys.Tab + "1233PM");
 
                 IWebElement preAns = Driver.FindElement(By.ClassName(randomPresentationAnswer));
                 preAns.Click();

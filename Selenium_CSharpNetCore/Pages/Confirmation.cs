@@ -18,7 +18,7 @@ namespace Selenium_CSharpNetCore.Pages
         [Test]
         public void Test1()
         {
-            int loopCounter = 2;
+            int loopCounter = 10;
             string status = "";
 
 
@@ -27,7 +27,7 @@ namespace Selenium_CSharpNetCore.Pages
             IWebElement txtUsername = Driver.FindElement(By.Id("input-username"));
             txtUsername.Click();
             txtUsername.SendKeys(Keys.Control + "a" + Keys.Delete);
-            txtUsername.SendKeys("tan@revlv.com");
+            txtUsername.SendKeys("confirmert4@revlv.com");
             //Driver.FindElement(By.Id("input-20")).SendKeys("password");
             Driver.FindElement(By.ClassName("v-btn__content")).Click();
 
@@ -35,6 +35,8 @@ namespace Selenium_CSharpNetCore.Pages
             {
                 status = RandomGenerator.generateConfStatus();
 
+                Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+ 
                 IWebElement btnOption = Driver.FindElement(By.Id("btn-options-0"));
                 btnOption.Click();
                 IWebElement btnQual = Driver.FindElement(By.Id("btn-approval-0"));
@@ -44,8 +46,6 @@ namespace Selenium_CSharpNetCore.Pages
                 comboStatus.SendKeys(status);
                 comboStatus.SendKeys(Keys.Down);
                 comboStatus.SendKeys(Keys.Enter);
-
-
             
                 System.Threading.Thread.Sleep(1000);
                 Driver.FindElement(By.Id("btn-save")).Click();

@@ -18,7 +18,7 @@ namespace Selenium_CSharpNetCore.Pages
         [Test]
         public void Test1()
         {
-            int loopCounter= 7;  
+            int loopCounter= 10;  
             Driver.Navigate().GoToUrl("http://112.199.116.13:3001/login");
             Driver.Manage().Window.Maximize();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
@@ -37,11 +37,11 @@ namespace Selenium_CSharpNetCore.Pages
                 Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
                 System.Threading.Thread.Sleep(1000);
 
-                IWebElement sortQual = Driver.FindElement(By.Id("btn-deck-sort"));
-                sortQual.Click();
-                Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
-                IWebElement filterQualified = Driver.FindElement(By.Id("btn-qualification-sort_qualified"));
-                filterQualified.Click();
+                //IWebElement sortQual = Driver.FindElement(By.Id("btn-deck-sort"));
+                //sortQual.Click();
+                //Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+                //IWebElement filterQualified = Driver.FindElement(By.Id("btn-qualification-sort_qualified"));
+                //filterQualified.Click();
 
                 IWebElement sortQ1 = Driver.FindElement(By.Id("btn-q1-sort"));
                 sortQ1.Click();
@@ -53,9 +53,9 @@ namespace Selenium_CSharpNetCore.Pages
                 btnOption.Click();
                 IWebElement btnQualification = Driver.FindElement(By.Id("btn-tag-0"));
                 btnQualification.Click();
-                System.Threading.Thread.Sleep(1000);
-                Driver.FindElement(By.Id("btn-confirm-action")).Click();
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(1500);
+                Driver.FindElement(By.Id("btn-save")).Click();
+                System.Threading.Thread.Sleep(3000);
 
             }
 

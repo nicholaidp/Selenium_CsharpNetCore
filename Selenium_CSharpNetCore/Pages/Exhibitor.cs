@@ -20,7 +20,7 @@ namespace Selenium_CSharpNetCore.Pages
         {
             #region Vars
 
-            int loopCounter = 5;
+            int loopCounter = 20;
 
             var randomFname = "";
             var randomLname = "";
@@ -107,37 +107,38 @@ namespace Selenium_CSharpNetCore.Pages
                 Driver.FindElement(By.Id("input_salutation")).SendKeys(randomSalutations);
                 Driver.FindElement(By.Id("input_first_name")).SendKeys(randomFname);
                 Driver.FindElement(By.Id("input_middle_name")).SendKeys(randomMname);
-                Driver.FindElement(By.Id("input_last_name")).SendKeys("ry-  " +randomLname);
+                Driver.FindElement(By.Id("input_last_name")).SendKeys(randomLname);
                 #endregion
 
                 #region source
-                IWebElement txtSource = Driver.FindElement(By.Id("input_source"));
-                txtSource.SendKeys(randomSource);
-                txtSource.SendKeys(Keys.Down);
-                txtSource.SendKeys(Keys.Enter);
+                //IWebElement txtSource = Driver.FindElement(By.Id("input_source"));
+                ////txtSource.SendKeys(randomSource);
+                //txtSource.SendKeys("Exhibit");
+                //txtSource.SendKeys(Keys.Down);
+                //txtSource.SendKeys(Keys.Enter);
                 #endregion
 
+                System.Threading.Thread.Sleep(1000);
                 #region sourceRemarks
                 IWebElement txtSourceRemarks = Driver.FindElement(By.Id("input-source-remark"));
-                txtSourceRemarks.SendKeys("Test");
+                txtSourceRemarks.SendKeys("ALM9");
                 txtSourceRemarks.SendKeys(Keys.Down);
                 txtSourceRemarks.SendKeys(Keys.Enter);
                 #endregion
 
                 #region Vm
-                IWebElement txtVM = Driver.FindElement(By.Id("input-vm"));
-                txtVM.Click();
-                txtVM.SendKeys(randomVM);
-                System.Threading.Thread.Sleep(1000);
-                txtVM.SendKeys(Keys.Down);
-                txtVM.SendKeys(Keys.Enter);
+                //IWebElement txtVM = Driver.FindElement(By.Id("input-vm"));
+                //txtVM.Click();
+                //txtVM.SendKeys(randomVM);
+                //System.Threading.Thread.Sleep(1000);
+                //txtVM.SendKeys(Keys.Down);
+                //txtVM.SendKeys(Keys.Enter);
                 #endregion
 
                 Driver.FindElement(By.Id("input_contact_number")).SendKeys("09" + randomPhonenumber);
                 Driver.FindElement(By.Id("input_email")).SendKeys(randomFname + randomLname + "@gmail.com");
-                //Driver.FindElement(By.Id("input_birthdate")).SendKeys(randomDOB);
-
-                IWebElement dateOfBirth = Driver.FindElement(By.Id("input_birthdate"));
+    
+                IWebElement dateOfBirth = Driver.FindElement(By.Id("input-birthdate"));
                 dateOfBirth.Click();
                 dateOfBirth.SendKeys(randomDOB);
 
@@ -156,7 +157,7 @@ namespace Selenium_CSharpNetCore.Pages
                 //System.Threading.Thread.Sleep(2000);
                 //txtCountry.SendKeys(Keys.Down);
                 //txtCountry.SendKeys(Keys.Enter);
-
+                System.Threading.Thread.Sleep(1000);
                 IWebElement txtProvince = Driver.FindElement(By.Id("input_province"));
                 txtProvince.Click();
                 txtProvince.SendKeys("Abra");
@@ -171,16 +172,7 @@ namespace Selenium_CSharpNetCore.Pages
                 txtCity.SendKeys(Keys.Enter);
                 #endregion
 
-                #region additionalAddress
-                //IWebElement txtSubdivision = Driver.FindElement(By.Id("input_subdivision"));
-                //txtSubdivision.SendKeys(randomSubdivision);
-                //IWebElement txtStreet = Driver.FindElement(By.Id("input_street"));
-                //txtStreet.SendKeys(randomStreet);
-                //IWebElement txtBuildingNum = Driver.FindElement(By.Id("input_building_number"));
-                //txtBuildingNum.SendKeys(randomBuildingnum);
-                //IWebElement txtPostalc = Driver.FindElement(By.Id("input_postal_code"));
-                //txtPostalc.SendKeys(randomPostalCode);
-                #endregion
+                
 
                 #region gender
                 //IWebElement gender = Driver.FindElement(By.Id("input_gender"));
