@@ -18,7 +18,7 @@ namespace Selenium_CSharpNetCore.Pages
         [Test]
         public void Test1()
         {
-            int loopCounter = 5;
+            int loopCounter = 1;
             var status = "book";
             var randomPresentationAnswer = "";
             var randomPresentationAttendance = "";
@@ -32,8 +32,8 @@ namespace Selenium_CSharpNetCore.Pages
             IWebElement txtUsername = Driver.FindElement(By.Id("input-username"));
             txtUsername.Click();
             txtUsername.SendKeys(Keys.Control + "a" + Keys.Delete);
-            txtUsername.SendKeys("booker2@revlv.com");
-            //Driver.FindElement(By.Id("input-20")).SendKeys("password");
+            txtUsername.SendKeys("bookertype2@revlv.com");
+            Driver.FindElement(By.Id("input-password")).SendKeys("password");
             Driver.FindElement(By.ClassName("v-btn__content")).Click();
 
             #endregion

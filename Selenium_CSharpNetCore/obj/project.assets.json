@@ -409,7 +409,7 @@
           "lib/net5.0/WebDriver.dll": {}
         }
       },
-      "Selenium.WebDriver.ChromeDriver/103.0.5060.5300": {
+      "Selenium.WebDriver.ChromeDriver/103.0.5060.13400": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -1504,10 +1504,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/103.0.5060.5300": {
-      "sha512": "UwIFn3QINPCwFrQwJUoV7yyAcuvIrRtleLitw8dx+a6db/Lizc0oBxuMyXttQolEVhS8Jf05IhvG+vLKZzBhjg==",
+    "Selenium.WebDriver.ChromeDriver/103.0.5060.13400": {
+      "sha512": "WdetrXq404253CfG3BLkafRG2BnuCUMIiYi7NNEetADtu97FkkFy512q1wEAxkbVQ5FV6P8ValFTeIgNTfvMSg==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/103.0.5060.5300",
+      "path": "selenium.webdriver.chromedriver/103.0.5060.13400",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1519,7 +1519,7 @@
         "driver/mac64arm/chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.103.0.5060.5300.nupkg.sha512",
+        "selenium.webdriver.chromedriver.103.0.5060.13400.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -1786,7 +1786,7 @@
       "NUnit3TestAdapter >= 4.2.1",
       "Selenium.Support >= 4.3.0",
       "Selenium.WebDriver >= 4.3.0",
-      "Selenium.WebDriver.ChromeDriver >= 103.0.5060.5300",
+      "Selenium.WebDriver.ChromeDriver >= 103.0.5060.13400",
       "WebDriverManager >= 2.14.1",
       "coverlet.collector >= 3.1.2"
     ]
@@ -1797,11 +1797,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\nicho\\source\\repos\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
       "projectName": "Selenium_CSharpNetCore",
-      "projectPath": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
+      "projectPath": "C:\\Users\\nicho\\source\\repos\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\Selenium_CSharpNetCore.csproj",
       "packagesPath": "C:\\Users\\nicho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicho\\Documents\\GitHub\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\obj\\",
+      "outputPath": "C:\\Users\\nicho\\source\\repos\\Selenium_CsharpNetCore\\Selenium_CSharpNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1856,7 +1856,7 @@
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[103.0.5060.5300, )"
+            "version": "[103.0.5060.13400, )"
           },
           "WebDriverManager": {
             "target": "Package",
@@ -1882,7 +1882,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
