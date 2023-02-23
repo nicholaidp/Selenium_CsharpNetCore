@@ -206,3 +206,6 @@ C:\Users\nicho\Documents\GitHub\Selenium_CsharpNetCore\Selenium_CSharpNetCore\bi
 C:\Users\nicho\Documents\GitHub\Selenium_CsharpNetCore\Selenium_CSharpNetCore\obj\Debug\net6.0\Selenium_CSharpNetCore.csproj.CopyComplete
 C:\Users\nicho\Documents\GitHub\Selenium_CsharpNetCore\Selenium_CSharpNetCore\obj\Debug\net6.0\Selenium_CSharpNetCore.genruntimeconfig.cache
 C:\Users\nicho\Documents\GitHub\Selenium_CsharpNetCore\Selenium_CSharpNetCore\obj\Debug\net6.0\ref\Selenium_CSharpNetCore.dll
+C:\Users\nicho\source\repos\Selenium_CsharpNetCore\Selenium_CSharpNetCore\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\nicho\source\repos\Selenium_CsharpNetCore\Selenium_CSharpNetCore\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\nicho\source\repos\Selenium_CsharpNetCore\Selenium_CSharpNetCore\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe

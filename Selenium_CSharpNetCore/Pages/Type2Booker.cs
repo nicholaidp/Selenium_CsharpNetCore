@@ -19,7 +19,7 @@ namespace Selenium_CSharpNetCore.Pages
         public void Test1()
         {
 
-            int loopCounter = 20;
+            int loopCounter = 10;
             string randomSource = "";
             var randomFname = "";
             var randomLname = "";
@@ -49,8 +49,8 @@ namespace Selenium_CSharpNetCore.Pages
             IWebElement txtUsername = Driver.FindElement(By.Id("input-username"));
             txtUsername.Click();
             txtUsername.SendKeys(Keys.Control + "a" + Keys.Delete);
-            txtUsername.SendKeys("bookert4@revlv.com");
-            Driver.FindElement(By.Id("input-20")).SendKeys("password");
+            txtUsername.SendKeys("bookertype2@revlv.com");
+            Driver.FindElement(By.Id("input-password")).SendKeys("password");
             Driver.FindElement(By.ClassName("v-btn__content")).Click();
 
             for(int i = 0; i < loopCounter; i++)
@@ -82,7 +82,7 @@ namespace Selenium_CSharpNetCore.Pages
                
                 #region source
                 IWebElement txtSource = Driver.FindElement(By.Id("input_source"));
-                txtSource.SendKeys(randomSource);
+                txtSource.SendKeys("ROI 2");
                 txtSource.SendKeys(Keys.Down);
                 txtSource.SendKeys(Keys.Enter);
                 #endregion
@@ -94,12 +94,15 @@ namespace Selenium_CSharpNetCore.Pages
 
                 //Driver.FindElement(By.Id("input_exhibit_time")).SendKeys("1233PM");
 
+
+                Driver.FindElement(By.Id("input-source-remark")).SendKeys("Testing");
                 #region Name
                 Driver.FindElement(By.Id("input_salutation")).SendKeys(randomSalutations);
                 Driver.FindElement(By.Id("input_first_name")).SendKeys(randomFname);
                 Driver.FindElement(By.Id("input_middle_name")).SendKeys(randomMname);
                 Driver.FindElement(By.Id("input_last_name")).SendKeys(randomLname);
                 #endregion
+
 
 
                 Driver.FindElement(By.Id("input_contact_number")).SendKeys("09" + randomPhonenumber);
@@ -128,18 +131,18 @@ namespace Selenium_CSharpNetCore.Pages
                 //txtCountry.SendKeys(Keys.Down);
                 //txtCountry.SendKeys(Keys.Enter);
 
-                IWebElement txtProvince = Driver.FindElement(By.Id("input_province"));
-                txtProvince.Click();
-                txtProvince.SendKeys("Abra");
-                System.Threading.Thread.Sleep(2000);
-                txtProvince.SendKeys(Keys.Down);
-                txtProvince.SendKeys(Keys.Enter);
-                IWebElement txtCity = Driver.FindElement(By.Id("input_city"));
-                txtCity.Click();
-                txtCity.SendKeys("Bucay");
-                System.Threading.Thread.Sleep(2000);
-                txtCity.SendKeys(Keys.Down);
-                txtCity.SendKeys(Keys.Enter);
+                //IWebElement txtProvince = Driver.FindElement(By.Id("input_province"));
+                //txtProvince.Click();
+                //txtProvince.SendKeys("Abra");
+                //System.Threading.Thread.Sleep(2000);
+                //txtProvince.SendKeys(Keys.Down);
+                //txtProvince.SendKeys(Keys.Enter);
+                //IWebElement txtCity = Driver.FindElement(By.Id("input_city"));
+                //txtCity.Click();
+                //txtCity.SendKeys("Bucay");
+                //System.Threading.Thread.Sleep(2000);
+                //txtCity.SendKeys(Keys.Down);
+                //txtCity.SendKeys(Keys.Enter);
                 #endregion
 
                 #region workInfo
@@ -154,10 +157,12 @@ namespace Selenium_CSharpNetCore.Pages
                 ddIncome.SendKeys(randomIncome);
                 ddIncome.SendKeys(Keys.Down);
                 ddIncome.SendKeys(Keys.Enter);
+
                 IWebElement ddWork = Driver.FindElement(By.Id("input_work"));
                 ddWork.SendKeys(randomWork);
                 ddWork.SendKeys(Keys.Down);
-                ddWork.SendKeys(Keys.Enter);
+                ddWork.SendKeys(Keys.Enter); 
+
                 Driver.FindElement(By.Id("input_spouse_occupation")).SendKeys(randomspouseOccupation);
 
                 #endregion
@@ -179,15 +184,15 @@ namespace Selenium_CSharpNetCore.Pages
                 #endregion
 
                 IWebElement bookDate = Driver.FindElement(By.Id("input_booking_date"));
-                bookDate.SendKeys("07/07/2022");
+                bookDate.SendKeys("08/08/2022");
 
 
                 IWebElement bookTime = Driver.FindElement(By.Id("input_booking_time"));
-                bookTime.SendKeys("1038AM");
+                bookTime.SendKeys("1111AM");
                 #region Vm
                 IWebElement txtVM = Driver.FindElement(By.Id("input-vm"));
                 txtVM.Click();
-                txtVM.SendKeys(randomVM);
+                txtVM.SendKeys("Jay Fernandez");
                 System.Threading.Thread.Sleep(1000);
                 txtVM.SendKeys(Keys.Down);
                 txtVM.SendKeys(Keys.Enter);

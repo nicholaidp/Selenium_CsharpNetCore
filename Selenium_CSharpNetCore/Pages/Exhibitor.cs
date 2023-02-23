@@ -76,7 +76,6 @@ namespace Selenium_CSharpNetCore.Pages
                 randomDOB = RandomGenerator.generateDOB();
                 randomCivilStatus = RandomGenerator.generateCivilStatus();
                 randomGender = RandomGenerator.generateGender();
-                randomBooker = RandomGenerator.generateBooker();
                 randomOccupations = RandomGenerator.generateOccupation();
                 randomSource = RandomGenerator.generateSource();
                 randomSubdivision = RandomGenerator.generateSubdivision();
